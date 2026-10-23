@@ -10,6 +10,8 @@
   <em>From Chapter 6 - one rule: the working code and its output, your own run in the browser, the breaking code with the real error, and why.</em>
 </p>
 
+> **Read it now:** **[python-from-zero-74f.pages.dev](https://python-from-zero-74f.pages.dev)** - opens straight in the browser, Run buttons included. No login, no download.
+
 > **Private notes.** This repo also holds my own chapter notes, practice files and revision handbook that the book was built from.
 
 ---
@@ -45,7 +47,10 @@ Part 1 is four modules. Read in order; each chapter ends with a quiz and each mo
 
 ## How to read
 
-### 1 · In your browser (recommended)
+### 1 · Online (recommended)
+Open **[python-from-zero-74f.pages.dev](https://python-from-zero-74f.pages.dev)**. Everything works there, including Run, quizzes and progress.
+
+### 2 · From a copy of this repo
 The **Run** buttons need the page served over http, so start a tiny local server:
 
 ```bash
@@ -57,10 +62,10 @@ python3 -m http.server 8765
 
 The first **Run** downloads Python into the browser (Pyodide, about 10 MB). After that it is instant.
 
-### 2 · Just reading
+### 3 · Just reading
 Double-click `python-course/python-course.html`. Everything reads fine; only the Run buttons need the server above.
 
-### 3 · Mobile
+### 4 · Mobile
 The page re-flows for phone screens: the side menu moves to the top, tables and diagrams scroll inside their own boxes.
 
 ---
@@ -116,6 +121,8 @@ Lists: positions and errors, adding and removing, `sort()` vs `sorted()`, search
 cd python-course
 python3 build.py   # runs every example, writes python-course.html
 ```
+
+To publish an update to the live site: `python-course/deploy.sh` (rebuilds, then uploads only the built page to Cloudflare Pages; this repo stays private).
 
 `build.py` runs **every** example, quiz question, break-it challenge, cheat-sheet line and revision example in Python, and writes the real output into the page. The build **stops** if an example that should work fails, or an example that should break raises a different error than the text says, so the page cannot claim something Python does not do.
 
